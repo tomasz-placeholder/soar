@@ -6,6 +6,12 @@ Install the dependencies:
 npm install
 ```
 
+Set up your environment by creating a `.env` file with the following:
+
+```
+VITE_API_URL=http://localhost:5173/api
+```
+
 ## Development
 
 Start the development server with HMR:
