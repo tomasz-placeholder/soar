@@ -1,3 +1,4 @@
+import BalanceHistory from 'components/BalanceHistory/BalanceHistory'
 import Cards from 'components/Cards/Cards'
 import ExpenseStatistics from 'components/ExpenseStatistics/ExpenseStatistics'
 import TopBar from 'components/TopBar/TopBar'
@@ -22,9 +23,7 @@ export default function Overview() {
 				<div className="bg-amber-100">
 					Quick Transfer
 				</div>
-				<div className="col-span-2 bg-amber-100">
-					Balance History
-				</div>
+				<BalanceHistory className='col-span-2'/>
 			</section>
 		</main>
 	)

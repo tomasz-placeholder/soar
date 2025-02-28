@@ -82,7 +82,7 @@ export default function ExpenseStatistics({ className, ...props }: { className?:
 			<header className='flex items-center justify-between'>
 				<h2 className='text-[20px] font-semibold text-[#343C6A]'>Expense Statistics</h2>
 			</header>
-			<div className='flex h-80 flex-col gap-2.5 rounded-2xl bg-white p-6'>
+			<div className='flex h-full flex-col gap-2.5 rounded-2xl bg-white p-6'>
 				{expenseStatistics.length > 0 ? <Pie options={options} data={data} /> : <p>Loading...</p>}
 			</div>
 		</section>
