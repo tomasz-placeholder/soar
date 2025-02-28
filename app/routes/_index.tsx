@@ -1,6 +1,7 @@
 import BalanceHistory from 'components/BalanceHistory/BalanceHistory'
 import Cards from 'components/Cards/Cards'
 import ExpenseStatistics from 'components/ExpenseStatistics/ExpenseStatistics'
+import QuickTransfer from 'components/QuickTransfer/QuickTransfer'
 import TopBar from 'components/TopBar/TopBar'
 import Transactions from 'components/Transactions/Transactions'
 import WeeklyActivity from 'components/WeeklyActivity/WeeklyActivity'
@@ -20,9 +21,7 @@ export default function Overview() {
 				<Transactions />
 				<WeeklyActivity className="col-span-2" />
 				<ExpenseStatistics />
-				<div className="bg-amber-100">
-					Quick Transfer
-				</div>
+				<QuickTransfer className="col-span-2 lg:col-span-1" />
 				<BalanceHistory className='col-span-2'/>
 			</section>
 		</main>

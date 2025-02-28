@@ -26,7 +26,9 @@ export default function Card({
 					{card.valid}
 				</div>
 			</div>
-			<div className='flex justify-between border-t border-t-[#DFEAF2] bg-gradient-to-b from-white/15 to-white/0 py-5 pr-6 pl-6 text-[22px] whitespace-nowrap'>
+			<div
+				className={`flex justify-between bg-gradient-to-b from-white/15 to-white/0 py-5 pr-6 pl-6 text-[22px] whitespace-nowrap ${card.dark ? '' : 'border-t border-t-[#DFEAF2]'}`}
+			>
 				{card.number}
 				<img src={MasterCard} alt='Mastercard' />
 			</div>
