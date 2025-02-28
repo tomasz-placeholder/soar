@@ -31,6 +31,7 @@ export const options = {
 		},
 	},
 	plugins: {
+		datalabels: false,
 		legend: {
 			position: 'top' as const,
 			align: 'end',

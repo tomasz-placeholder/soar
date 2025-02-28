@@ -1,4 +1,5 @@
 import Cards from 'components/Cards/Cards'
+import ExpenseStatistics from 'components/ExpenseStatistics/ExpenseStatistics'
 import TopBar from 'components/TopBar/TopBar'
 import Transactions from 'components/Transactions/Transactions'
 import WeeklyActivity from 'components/WeeklyActivity/WeeklyActivity'
@@ -17,9 +18,7 @@ export default function Overview() {
 				<Cards className="col-span-2"/>
 				<Transactions />
 				<WeeklyActivity className="col-span-2" />
-				<div className="bg-amber-100">
-					Expense statistics
-				</div>
+				<ExpenseStatistics />
 				<div className="bg-amber-100">
 					Quick Transfer
 				</div>
