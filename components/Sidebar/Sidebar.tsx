@@ -1,15 +1,28 @@
 import clsx from 'clsx'
+import Close from 'public/icons/close.svg'
 import { NavLink } from 'react-router'
+import { useSidebar } from '../../context/SidebarContext'
 import Menu from '../Sidebar/Menu/Menu'
 import Logo from '/logo.svg'
-type MenuItem = { icon: string; label: string; slug: string }
 
 export default function Sidebar({ className }: { className?: string }) {
+	const { toggleSidebar, isOpen } = useSidebar()
 	return (
-		<header className={clsx('relative lg:left-0 flex flex-col transition-transform border-r border-r-[#E6EFF5] w-max h-screen', false ? 'left-0' : '-left-4/5' ,className)}>
-			<NavLink to='/' aria-label='Dashboard' className='px-10 py-7'>
-				<img src={Logo} alt='Soar Task logo' className='h-10 w-auto' />
-			</NavLink>
+		<header
+			className={clsx(
+				'fixed lg:relative lg:left-0 transition-all flex z-50 bg-white flex-col border-r border-r-[#E6EFF5] w-max h-screen',
+				isOpen ? 'left-0' : '-left-4/5',
+				className
+			)}
+		>
+			<div className="flex px-10 gap-4 py-7">
+				<NavLink to='/' aria-label='Dashboard'>
+					<img src={Logo} alt='Soar Task logo' className='h-10 w-auto' />
+				</NavLink>
+				<button onClick={toggleSidebar} className='cursor:pointer lg:hidden'>
+					<img src={Close} />
+				</button>
+			</div>
 			<Menu />
 		</header>
 	)

@@ -65,7 +65,7 @@ export default function QuickTransfer({ className, ...props }: { className?: str
 							placeholder='525.50'
 							className='w-full rounded-full bg-[#EDF1F7] px-4 py-2 focus:outline-none'
 						/>
-						<button className='flex gap-2 rounded-full bg-black py-2 pr-8 pl-4 text-white'>
+						<button className='flex cursor-pointer gap-2 rounded-full bg-black py-2 pr-8 pl-4 text-white'>
 							Send
 							<img src={Send} role='presentation' className='h-6.5 w-6.5' />
 						</button>

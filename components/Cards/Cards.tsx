@@ -29,7 +29,7 @@ export default function Cards({ className, ...props }: { className?: string }) {
 		<section {...props} className={clsx('flex flex-col gap-5', className)}>
 			<header className='flex items-center justify-between'>
 				<h2 className='text-[20px] font-semibold text-[#343C6A]'>My Cards</h2>
-				<NavLink to='#' className='text-[17px]'>
+				<NavLink to='#' className='text-[17px] hover:text-blue-800'>
 					See All
 				</NavLink>
 			</header>
