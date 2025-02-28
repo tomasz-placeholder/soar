@@ -1,7 +1,9 @@
 import Sidebar from 'components/Sidebar/Sidebar'
+import { SidebarProvider } from 'context/SidebarContext'
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
 import type { Route } from './+types/root'
 import './app.css'
+
 
 export const links: Route.LinksFunction = () => [
 	{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -23,9 +25,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Meta />
 				<Links />
 			</head>
-			<body className='grid grid-cols-[max-content_1fr]'>
-				<Sidebar/>
-				{children}
+			<body className='lg:grid lg:grid-cols-[max-content_1fr]'>
+				<SidebarProvider>
+					<Sidebar/>
+					{children}
+				</SidebarProvider>
 				<ScrollRestoration />
 				<Scripts />
 			</body>
