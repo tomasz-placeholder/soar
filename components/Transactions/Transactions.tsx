@@ -30,7 +30,7 @@ export default function Transactions({ className, ...props }: { className?: stri
 				<h2 className='text-[20px] font-semibold text-[#343C6A]'>Recent Transactions</h2>
 			</header>
 			<div className='flex h-full flex-col gap-2.5 rounded-2xl bg-white p-6'>
-				{transactions?.map((transaction) => <Transaction key={transaction.number} transaction={transaction} />)}
+				{transactions?.map((transaction) => <Transaction key={transaction.value} transaction={transaction} />)}
 			</div>
 		</section>
 	)

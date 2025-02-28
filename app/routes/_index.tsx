@@ -1,7 +1,9 @@
 import Cards from 'components/Cards/Cards'
 import TopBar from 'components/TopBar/TopBar'
 import Transactions from 'components/Transactions/Transactions'
+import WeeklyActivity from 'components/WeeklyActivity/WeeklyActivity'
 import type { Route } from './+types/_index'
+
 
 export function meta({}: Route.MetaArgs) {
 	return [{ title: 'Soar: Front-End Task' }, { name: 'description', content: 'Front-End Developer Assessment Task' }]
@@ -14,9 +16,7 @@ export default function Overview() {
 			<section className="grid grid-cols-2 xl:grid-cols-3 grid-flow-dense gap-x-7.5 gap-y-6 px-10 py-6 bg-[#F5F7FA]">
 				<Cards className="col-span-2"/>
 				<Transactions />
-				<div className="col-span-2 bg-amber-100">
-					Weekly Activity
-				</div>
+				<WeeklyActivity className="col-span-2" />
 				<div className="bg-amber-100">
 					Expense statistics
 				</div>
