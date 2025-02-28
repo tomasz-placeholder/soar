@@ -28,7 +28,7 @@ export default function SettingsForm() {
 						Security
 					</NavLink>
 				</div>
-				<div className='flex w-full flex-col items-center gap-14 lg:flex-row'>
+				<div className='flex w-full flex-col items-center gap-14 lg:flex-row lg:items-start'>
 					<div>
 						<img src={User} className='w-24 object-cover' />
 					</div>
