@@ -16,7 +16,7 @@ export default function Overview() {
 	return (
 		<main className="w-full">
 			<TopBar title="Overview" />
-			<section className="grid grid-cols-2 xl:grid-cols-3 grid-flow-dense gap-x-7.5 gap-y-6 px-10 py-6 bg-[#F5F7FA]">
+			<section className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 grid-flow-dense gap-x-7.5 gap-y-6 px-10 py-6 bg-[#F5F7FA]">
 				<Cards className="col-span-2"/>
 				<Transactions />
 				<WeeklyActivity className="col-span-2" />
